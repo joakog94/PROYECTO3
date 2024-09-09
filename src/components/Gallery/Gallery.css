@@ -1,0 +1,98 @@
+#gallery {
+  column-count: 5;
+  column-gap: 20px;
+  padding: 30px 50px;
+  margin-top: 20px;
+}
+
+#mostrar-mas {
+  border: none;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  background-color: var(--primary);
+  color: var(--color-background);
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+.no-results {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.mensaje {
+  width: 100%;
+  text-align: center;
+}
+
+.sugerencias {
+  padding: 20px 0px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.sugerencias > button {
+  position: relative;
+  padding: 7px 15px;
+  color: var(--color-background);
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.sugerencias > button::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--color-background);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.sugerencias > button:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 1200px) {
+  #gallery {
+    column-count: 4; /* 4 columnas para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 992px) {
+  #gallery {
+    column-count: 3; /* 3 columnas para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  #gallery {
+    column-count: 2; /* 2 columnas para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  #gallery {
+    column-count: 1; /* 1 columna para pantallas muy pequeñas */
+  }
+}

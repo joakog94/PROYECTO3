@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card .imagen {
+  width: 100%;
+  border-radius: 10px;
+  min-height: 200px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .button {
+  border-radius: 20px;
+  position: absolute;
+  top: 26%;
+  display: none;
+}
+
+.card:hover > button {
+  display: block;
+}
+
+.card .perfil {
+  width: 30%;
+  border-radius: 100%;
+  border: 2px solid var(--color-background);
+  outline: 2px solid var(--logo);
+  position: relative;
+  top: -55px;
+}
+
+.card:hover .perfil {
+  transform: scale(1.2);
+}
+
+.card > p {
+  position: relative;
+  top: -50px;
+}
+
+.div-likes {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--secondary);
+  border-radius: 40px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+
+.div-likes > img {
+  height: 25px;
+  width: 25px;
+}
+
+.div-likes > p {
+  font-size: 11px;
+}
+
+.div-likes {
+  display: none;
+}
+
+.div-fotos {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--secondary);
+  border-radius: 40px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+
+.div-fotos > img {
+  height: 25px;
+  width: 25px;
+}
+
+.div-fotos > p {
+  font-size: 11px;
+}
+
+.div-fotos {
+  display: none;
+}
+
+.card:hover .div-likes {
+  display: block;
+}
+
+.card:hover .div-fotos {
+  display: block;
+}
